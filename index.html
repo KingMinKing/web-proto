@@ -1,0 +1,235 @@
+
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.selectric.js"></script>
+        <script src="js/ui.js"></script>
+        <link href="css/jquery.bxslider.css" rel="stylesheet">
+        <script src="js/jquery.bxslider.js"></script>
+        <title>Home: 보성케이블에 오신걸 환영합니다~</title>
+    </head>
+    
+    <body>
+        <h1 class="blind">Navigator</h1>
+        <div class="header">
+            <h2 class="blind">헤더 영역</h2>
+            <div class="top-navi">
+                    <div class="logo-area">
+                    <a href="index.html"><img src="images/common/logo.png" width="60" height="30" alt="보성케이블"></a>
+                </div>
+                <div class="gnb" id="gnb" tabindex="0">
+                    <h3 class="blind">메인메뉴</h3>
+                    <ul>
+                        <li><a href="company/company-CEO.html">회사소개</a>
+                            <ul class="category" style="display: none;">
+                                <li><a href="company/company-CEO.html">CEO인사말</a></li>
+                                <li><a href="company/company-history.html">연혁</a></li>
+                                <li><a href="company/company-location.html">오시는길</a></li>   
+                                <li><a href="company/company-view.html">회사전경</a></li>
+                                <li><a href="company/company-financial.html">재무현황</a></li>
+                                <li><a href="company/video.html">홍보영상</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="product/product-ULcertified.html">제품</a>
+                            <ul class="category" style="display: none;">
+                                <li><a href="product/product-ULcertified.html">UL 인증 기기선</a></li>
+                                <li><a href="product/product-car_cable.html">자동차전선</a></li>
+                                <li><a href="product/product-ceri.html">인증정보</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="transport.html">유통과정</a>
+                        </li>
+                        <li><a href="customer_servixe/FaQ.html">고객센터</a>
+                            <ul class="category" style="display: none;">
+                                <li><a href="customer_servixe/FaQ.html">자주묻는질문</a></li>
+                                <li><a href="customer_servixe/inquiry.html">견적/기타문의</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // .cert-wrap 내부의 .bxslider 초기화
+                $('.cert-wrap .bxslider').bxSlider({
+                    slideWidth: 150,          // 슬라이드의 너비를 이미지 크기에 맞게 설정
+                    minSlides: 1,             // 한 번에 보이는 슬라이드 수를 최소화
+                    maxSlides: 3,             // 한 번에 보이는 최대 슬라이드 수
+                    slideMargin: 10,          // 슬라이드 간격
+                    adaptiveHeight: true,     // 이미지 높이에 따라 슬라이더 높이 조정
+                    controls: true,           // 이전/다음 버튼 활성화
+                    pager: true,              // 페이지 네비게이션 활성화
+                    auto: false,              // 자동 슬라이드 비활성화
+                    moveSlides: 1,            // 한 번에 이동하는 슬라이드 수
+                });
+                // 브라우저 확인 (불필요한 중복 제거)
+                var agent = navigator.userAgent.toLowerCase();
+                var Browser = {
+                    ie: agent.indexOf('msie') != -1,
+                    ie6: agent.indexOf('msie 6') != -1,
+                    ie7: agent.indexOf('msie 7') != -1,
+                    ie8: agent.indexOf('msie 8') != -1,
+                    ie9: agent.indexOf('msie 9') != -1,
+                    ie10: agent.indexOf('msie 10') != -1,
+                    opera: !!window.opera,
+                    safari: agent.indexOf('safari') != -1,
+                    chrome: agent.indexOf('chrome') != -1,
+                    firefox: agent.indexOf('firefox') != -1,
+                    mac: agent.indexOf('mac') != -1,
+                };
+        
+                // iPhone 체크
+                if (agent.match('iphone')) {
+                    $(".visual-wrap .txt-con .kor-s").css("font-size", "0.6em");
+                }
+            });
+        
+                // 추가 기능
+                function fMoreFQA() {
+                    location.href = "/rnd/rnd-faq.php";
+                }
+                function fGoFaqView(category, seq) {
+                    location.href = "/rnd/rnd-faq.php?cate=" + category + "&seq=" + seq;
+                }
+        </script>
+            
+        <div class="key-visual">
+            <h2 class="blind">메인비주얼 영역</h2>
+            <div class="visual-wrap">
+                <div class = "img-con">
+                    <img src= "images/main/skyscraper.jpg" alt style="width: 100%; height: 400px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-con-top" id="content" tabindex="0">
+            <h2 class="blind">컨텐츠 영역</h2>
+            <div class="cert-wrap">
+                        <h3 class="cert-title">주요 거래처</h3>
+                        <div class="bx-wrapper">
+                            <div class="bx-viewport">
+                                <ul class="bxslider" >
+                                    <li class="bx-clone">
+                                            <span class="img-con"><img src="images/partners/daewon.png" alt=""></span>
+                                            <!--<span class="txt-con">Public institution bidding qualification</span>-->
+                                    </li>
+                                    <li class="bx-clone">
+                                        <span class="img-con"><img src="images/partners/DL-E&C.jpg" alt=""></span>
+                                            <!--<span class="txt-con">Delivery performance</span>-->
+                                    </li>
+                                    <li class="bx-clone">
+                                            <span class="img-con"><img src="images/partners/dw.jpg" alt=""></span>
+                                            <!--<span class="txt-con">TRCU</span>-->
+                                    </li>
+                                    <li  class="bx-clone">
+                                    <span class="img-con"><img src="images/partners/Hanwha.jpg" alt=""></span>
+                                            <!--<span class="txt-con">CE</span>-->
+                                    </li>
+                                    <li class="bx-clone">
+                                        <span class="img-con"><img src="images/partners/knkup.png" alt=""></span>
+                                            <!--<span class="txt-con">Registration and ISO</span>-->
+                                    </li>
+                                    <li class="bx-clone">
+                                        <span class="img-con"><img src="images/partners/sk.png" alt=""></span>
+                                            <!--<span class="txt-con">Korea Industrial Standards</span>-->
+                                    </li>
+                                    <li class="bx-clone">
+                                        <span class="img-con"><img src="images/partners/posco_enc_korean.png" alt=""></span>
+                                            <!--<span class="txt-con">Electronic device safety</span>-->
+                                    </li>
+                                    <li  class="bx-clone">
+                                            <span class="img-con"><img src="images/partners/news-logo.png" alt=""></span>
+                                            <!--<span class="txt-con">Korea Eco-Label</span>-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bx-controls bx-has-pager bx-has-controls-direction">
+                                <div class="bx-pager bx-default-pager">
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="0" class="bx-pager-link">1</a>
+                                    </div>
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="1" class="bx-pager-link">2</a>
+                                    </div>
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="2" class="bx-pager-link">3</a>
+                                    </div>
+                                    <div class="bx-pager-item">
+                                        <a href="" data-slide-index="3" class="bx-pager-link">4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div><!--//faq-wrap -->
+
+            <div class="catalog-wrap">
+                    <h3 class="catalog-wrap-Title">CATALOG</h3>
+            </div>   <!--//catalog-wrap -->
+        </div>
+                
+        <div class="footer">
+            <h2 class="blind">맨 아래 회색</h2>
+                        <!--<li><a href="/admin/login.php">로그인</a></li> -->
+            <div>사이트맵</div>
+            <div class="addr">주소: 경기 평택시 오성면 오성북로 50
+                <br>Tel: 031-651-2383
+                <br>Fax: 031-
+            </div>
+            <div class="copy">[개인정보처리방침]</div>
+        </div>  <!--//footer -->    
+    </body>
+</html>
+
+
+  <!--          <div class="certification">
+                    <div class="title-con">
+                        <h3 class="tit-type2">인증내역</h3>
+                    </div>
+                    <div class="banner-con">
+                        <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 50px;"><ul class="bxslider" style="width: 715%; position: relative; transition-duration: 0.5s; transform: translate3d(-960px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 240px;" class="bx-clone"><img src="/images/main/img-certification-5.jpg" alt="KC"></li>
+                             <li style="float: left; list-style: none; position: relative; width: 240px;"><img src="/images/main/img-certification-1.jpg" alt="Kfq 한국품질재단"></li>
+                            <li style="float: left; list-style: none; position: relative; width: 240px;"><img src="/images/main/img-certification-2.jpg" alt="Underwriters Laboratories Inc."></li>
+                            <li style="float: left; list-style: none; position: relative; width: 240px;"><img src="/images/main/img-certification-3.jpg" alt="g한국인정지원센터"></li>
+                            <li style="float: left; list-style: none; position: relative; width: 240px;"><img src="/images/main/img-certification-4.jpg" alt="녹색경영체제인증"></li>
+                            <li style="float: left; list-style: none; position: relative; width: 240px;"><img src="/images/main/img-certification-5.jpg" alt="KC"></li>
+                         <li style="float: left; list-style: none; position: relative; width: 240px;" class="bx-clone">
+                            <img src="/images/main/img-certification-1.jpg" alt="Kfq 한국품질재단">
+                        </li>
+                    </ul>
+                </div>
+                <div class="bx-controls bx-has-pager bx-has-controls-direction bx-has-controls-auto">
+                    <div class="bx-pager bx-default-pager">
+                        <div class="bx-pager-item">
+                        <a href="" data-slide-index="0" class="bx-pager-link">1</a>
+                    </div>
+                    <div class="bx-pager-item">
+                        <a href="" data-slide-index="1" class="bx-pager-link">2</a>
+                    </div>
+                    <div class="bx-pager-item">
+                        <a href="" data-slide-index="2" class="bx-pager-link">3</a>
+                    </div>
+                    <div class="bx-pager-item">
+                        <a href="" data-slide-index="3" class="bx-pager-link">4</a>
+                    </div>
+                    <div class="bx-pager-item">
+                        <a href="" data-slide-index="4" class="bx-pager-link">5</a>
+                    </div>
+                </div>
+                <div class="bx-controls-direction">
+                    <button type="button" class="bx-prev">Prev</button>
+                    <button type="button" class="bx-next">Next</button>
+                </div>
+                <div class="bx-controls-auto">
+                    <div class="bx-controls-auto-item">
+                        <button type="button" class="bx-start active">Start</button>
+                    </div>
+                    <div class="bx-controls-auto-item">
+                        <button type="button" class="bx-stop">Stop</button>
+                    </div>
+                </div>
+            </div>-->
