@@ -1,0 +1,50 @@
+        /* Flexbox 레이아웃 설정 */
+        .inquiry {
+            display: flex;
+            align-items: flex-start; /* 상단 정렬 */
+            gap: 20px; /* 이미지와 폼 사이 간격 */
+            justify-content: flex-start; /* 내용 정렬 */
+        }
+
+        /* 이미지 스타일 */
+        .inquiry img {
+            max-width: 50%; /* 이미지가 부모 컨테이너의 절반 너비 */
+            height: auto; /* 비율 유지 */
+        }
+
+        /* 폼 스타일 */
+        form {
+            padding: 10px;
+            display: flex;
+            flex-direction: column; /* 수직 정렬 */
+            width: 300px; /* 폼 너비 */
+        }
+
+        form label {
+            font-size: 14px;
+            color: black;
+        }
+
+        form input {
+            margin-bottom: 17px; /* 입력 필드 간격 */
+            height: 34px;
+            padding: 8px;
+            color: black;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
